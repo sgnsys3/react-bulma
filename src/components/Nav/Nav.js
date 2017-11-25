@@ -16,13 +16,10 @@ A responsive horizontal nav bar that can contain links, tabs, buttons, icons, an
 */
 const Nav = ({
   as: Div,
-  hasShadow,
   className,
   ...props
 }) => {
-  const classes = classNames('nav', {
-    'has-shadow': hasShadow
-  }, className)
+  const classes = classNames('navbar', className)
 
   return <Div className={classes} {...props} />
 }
@@ -31,7 +28,6 @@ Nav.displayName = 'Nav'
 
 Nav.propTypes = {
   as: PropTypes.node,
-  hasShadow: PropTypes.bool,
   className: PropTypes.string
 }
 
