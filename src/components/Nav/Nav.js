@@ -15,13 +15,12 @@ import NavStart from './NavStart'
 A responsive horizontal nav bar that can contain links, tabs, buttons, icons, and a logo
 */
 const Nav = ({
-  as: Div,
   className,
   ...props
 }) => {
   const classes = classNames('navbar', className)
 
-  return <Div className={classes} {...props} />
+  return <nav className={classes} {...props} />
 }
 
 Nav.displayName = 'Nav'
@@ -29,10 +28,6 @@ Nav.displayName = 'Nav'
 Nav.propTypes = {
   as: PropTypes.node,
   className: PropTypes.string
-}
-
-Nav.defaultProps = {
-  as: 'nav'
 }
 
 Nav.Brand = NavBrand
