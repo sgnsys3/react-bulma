@@ -3,37 +3,20 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const NavItem = ({
-  as: Item,
-  active,
-  tab,
-  hiddenTablet,
-  hiddenMobile,
+  link,
   className,
   ...props
 }) => {
-  const classes = classNames('nav-item', {
-    'is-active': active,
-    'is-tab': tab,
-    'is-hidden-tablet': hiddenTablet,
-    'is-hidden-mobile': hiddenMobile
-  }, className)
-
-  return <Item className={classes} {...props} />
+  const classes = classNames('navbar-item', className)
+  if (link) return <a className={classes} {...props} />
+  else return <div className={classes} {...props} />
 }
 
 NavItem.displayName = 'Nav.Item'
 
 NavItem.propTypes = {
-  as: PropTypes.node,
   className: PropTypes.string,
-  active: PropTypes.bool,
-  tab: PropTypes.bool,
-  hiddenTablet: PropTypes.bool,
-  hiddenMobile: PropTypes.bool
-}
-
-NavItem.defaultProps = {
-  as: 'a'
+  link: PropTypes.Bool
 }
 
 export default NavItem

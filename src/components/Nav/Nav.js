@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NavLeft from './NavLeft'
-import NavCenter from './NavCenter'
-import NavRight from './NavRight'
-import NavItem from './NavItem'
-import NavToggle from './NavToggle'
 import classNames from 'classnames'
+import NavBrand from './NavBrand'
+import NavBurger from './NavBurger'
+import NavDivider from './NavDivider'
+import NavDropdown from './NavDropdown'
+import NavEnd from './NavEnd'
+import NavItem from './NavItem'
+import NavLink from './NavLink'
+import NavMenu from './NavMenu'
+import NavStart from './NavStart'
 
 /*
 A responsive horizontal nav bar that can contain links, tabs, buttons, icons, and a logo
@@ -35,10 +39,14 @@ Nav.defaultProps = {
   as: 'nav'
 }
 
-Nav.Left = NavLeft
-Nav.Center = NavCenter
-Nav.Right = NavRight
+Nav.Brand = NavBrand
+Nav.Burger = NavBurger
+Nav.Divider = NavDivider
+Nav.Dropdown = NavDropdown
+Nav.End = NavEnd
 Nav.Item = NavItem
-Nav.Toggle = NavToggle
+Nav.Link = NavLink
+Nav.Menu = NavMenu
+Nav.Start = NavStart
 
 export default Nav
