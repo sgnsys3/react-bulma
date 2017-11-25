@@ -26,7 +26,6 @@ const Nav = ({
 Nav.displayName = 'Nav'
 
 Nav.propTypes = {
-  as: PropTypes.node,
   className: PropTypes.string
 }
 
